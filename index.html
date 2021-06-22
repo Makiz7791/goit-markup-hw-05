@@ -104,9 +104,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button" type="button" data-modal-open>
-            Заказать услугу
-          </button>
+          <button data-modal-open type="button" class="button touch-open">Заказать услугу</button>
         </div>
       </section>
       <section class="about">
@@ -168,26 +166,30 @@
         <div class="container">
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="features-list">
-            <li>
+            <li class="all-gadget">
               <img
                 src="./images/img1.jpg"
-                alt="веб приложения для ПК"
+                alt="Дестопные приложения"
                 width="370"
               />
+              <div class="work">
+<h3 class="mobail">Дестопные приложения</h3></div>
             </li>
-            <li>
+            <li class="all-gadget">
               <img
                 src="./images/img2.jpg"
-                alt="веб приложения для смартфонов"
+                alt="Мобильные приложения"
                 width="370"
               />
+              <div class="work"><h3 class="mobail">Мобильные приложения</h3></div>
             </li>
-            <li>
+            <li class="all-gadget">
               <img
                 src="./images/img3.jpg"
-                alt="веб приложения для планшетов"
+                alt="Дизайнерские решения"
                 width="370"
               />
+              <div class="work"><h3 class="mobail">Дизайнерские решения</h3></div>
             </li>
           </ul>
         </div>
@@ -464,16 +466,36 @@
       </div>
     </footer>
     <!--modal-->
-    <div class="backdrop is-hidden touch">
-      <div class="modal touch">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <button class="modal-button" data-modal-close>
-          <svg width="11px" height="11px">
+    <div class="backdrop-is-hidden" data-modal>
+      <div class="modal">
+       
+        <button class="modal-button" data-modal-close="">
+          <svg class="close" width=18px" height="18px">
             <use href="./images/open-closed.svg"></use>
           </svg>
         </button>
       </div>
     </div>
+    <div class="modal-touch">
+    
+    <button class="modal-button" data-modal-close="">
+        <svg width="11px" height="11px">
+            <use href="./img-icons/sprite.svg#icon-close-black-18dp"></use>
+        </svg>
+    </button>
+</div>
     <script src="./js/modal.js"></script>
+    <!-- ;(() => {
+        const refs = {
+            openModalBtn: document.querySelector('[data-modal-open]'),
+            closeModalBtn: document.querySelector('[data-modal-close]'),
+            modal: document.querySelector('[data-modal]'),
+        };
+        refs.openModalBtn.addEventListener('click', toggleModal);
+        refs.closeModalBtn.addEventListener('click', toggleModal);
+        function toggleModal() {
+            refs.modal.classList.toggle('is-hidden');
+        }
+    })() -->
   </body>
 </html>
